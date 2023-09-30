@@ -1,0 +1,11 @@
+.wrap {
+  position: relative;
+}
+.modal {
+  z-index: 2;
+  position: absolute;
+  background-color: darkgrey;
+}
+.found {
+  border: 1px solid black;
+}
