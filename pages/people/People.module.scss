@@ -1,7 +1,12 @@
 .flex {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+
   margin-bottom: 10px;
+  &__link {
+    // display: inline-flex;
+    // justify-content: space-around;
+  }
 }
 .btn {
   background-color: #6b6b6b;

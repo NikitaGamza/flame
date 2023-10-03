@@ -1,5 +1,6 @@
 import './globals.scss';
 import Header from './components/Header/Header';
+import { FavoriteContextProvider } from '@/context';
 // import type { Metadata } from 'next';
 // import { Inter } from 'next/font/google';
 
@@ -20,7 +21,7 @@ export default function RootLayout({
     //   <body>
     <>
       <Header />
-      {children}
+      <FavoriteContextProvider>{children}</FavoriteContextProvider>
     </>
     //   </body>
     // </html>

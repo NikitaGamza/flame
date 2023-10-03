@@ -8,3 +8,5 @@ export default function Home() {
     </main>
   );
 }
+
+//contex favorite people

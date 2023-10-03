@@ -2,8 +2,29 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 export default function Character() {
+  interface ICharacter {
+    name: string;
+    height: number;
+    mass: number;
+    hair_color: string;
+    skin_color: string;
+    eye_color: string;
+    birth_year: string;
+    gender: string;
+    url: string;
+  }
   const router = useRouter();
-  const [character, setCharacter] = useState({});
+  const [character, setCharacter] = useState<ICharacter>({
+    name: '',
+    height: 0,
+    mass: 0,
+    hair_color: '',
+    skin_color: '',
+    eye_color: '',
+    birth_year: '',
+    gender: '',
+    url: '',
+  });
   useEffect(() => {
     axios
       .get(`https://swapi.dev/api/people/${router.query.id}`)
